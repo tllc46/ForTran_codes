@@ -236,11 +236,11 @@ READ(10,'(a27)')ofilegcb
 OPEN(UNIT=20,FILE=ifilev,status='old')
 READ(20,*)ni,nvgt !1,1
 IF(nvgt.LT.1.OR.nvgt.GT.2)THEN
-  WRITE(6,*)'There can only be one or two'
-  WRITE(6,*)'sets of velocity grids corresponding'
-  WRITE(6,*)'to P and S wavespeeds!!!'
-  WRITE(6,*)'TERMINATING PROGRAM!!!'
-  STOP
+   WRITE(6,*)'There can only be one or two'
+   WRITE(6,*)'sets of velocity grids corresponding'
+   WRITE(6,*)'to P and S wavespeeds!!!'
+   WRITE(6,*)'TERMINATING PROGRAM!!!'
+   STOP
 ENDIF
 IF(ppors.EQ.0)nvgt=1
 ni=ni+1
@@ -261,7 +261,7 @@ DO ips=1,nvgt
          IF(nnt(ii)-2.NE.nnt(ii-1))vgid=1
          IF(nnp(ii)-2.NE.nnp(ii-1))vgid=1
       ENDIF
-     !nnr(ii)=nnr(ii)-2
+     !nnr(ii)=nnr(ii)-2 !220108 Donglin Choi
      !nnt(ii)=nnt(ii)-2
      !nnp(ii)=nnp(ii)-2
      !gst(ii)=gst(ii)*180.0/pi
@@ -523,7 +523,7 @@ IF(parv.EQ.1)THEN
    DO ips=1,nvgt
       DO ii=1,ni-1
          READ(20,*)idm1,idm2,idm3
-        !idm1=idm1-2
+        !idm1=idm1-2 !220108 Donglin Choi
         !idm2=idm2-2
         !idm3=idm3-2
          IF(nvgt.EQ.1.OR.nvgt.EQ.2.AND.ips.EQ.2)THEN
