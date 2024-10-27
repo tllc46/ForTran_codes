@@ -1,4 +1,4 @@
 # ForTran codes
-gcslice.f90: fmtomo/source/gmtslice.f90 수정
+gcslice.f90: modified fmtomo/source/gmtslice.f90 to use in FMTT
 
-tcas-mod.f: astack/tcas.f 수정
+tcas-mod.f: modified astack/tcas.f
